@@ -426,7 +426,7 @@ small,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70vw;
+  width: 90vw;
   margin: 7em auto;
 }
 
@@ -445,6 +445,7 @@ small,
 
 .review-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -569,4 +570,9 @@ small,
   .anime-btn {
     align-self: end;
   }
+
+
+#reviews-list {
+  width: 80vw;
+}
 }

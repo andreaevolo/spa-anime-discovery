@@ -17,4 +17,4 @@ You don't need to be logged in, the app the browser localStorage Api to save you
 
 ## Home 
 
-[alt home page](https://drive.google.com/file/d/1pS4oKeGrTeDMS0ke3XfiaBz_SrAXDRMf/view?usp=sharing)
+![alt home page](https://drive.google.com/file/d/1pS4oKeGrTeDMS0ke3XfiaBz_SrAXDRMf/view?usp=sharing)

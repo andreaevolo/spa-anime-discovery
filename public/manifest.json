@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Anime Discovery",
+  "name": "Search info about your favourite anime or discover new ones.",
   "icons": [
     {
       "src": "favicon.ico",

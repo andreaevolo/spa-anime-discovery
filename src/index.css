@@ -329,7 +329,7 @@ small,
 #list-container {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   margin: 3em auto;
 }
 .list-item {
@@ -338,7 +338,7 @@ small,
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  height: 5em;
+  max-height: 10em;
   animation: 400ms normal linear 200ms animate-item;
   position: relative;
 }
@@ -380,7 +380,7 @@ small,
   justify-content: center;
   align-items: center;
   height: 2.4em;
-  margin-top: 1em;
+  margin-top: 2em;
   cursor: pointer;
 }
 .alert {

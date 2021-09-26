@@ -302,7 +302,7 @@ p {
   color: white;
   font-size: 2em;
   font-family: "Roboto", sans-serif;
-  margin-left: 0.8em;
+  text-align: center;
 }
 
 #info-text {

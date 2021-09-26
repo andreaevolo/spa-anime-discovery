@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Banner from "./Banner";
 import SearchBar from "./SearchBar";
 import AnimeCardBoard from "./AnimeCardBoard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import Spinner from "./Spinner";
 
 const Home = (props) => {
@@ -51,7 +49,7 @@ const Home = (props) => {
 
   return (
     <div>
-      <Banner title="Search info about your favourite anime or discover new one" />
+      <Banner title="Search info about your favourite anime" subtitle="or discover new ones"/>
       <SearchBar onInputChange={handleChange} />
       {!animeList.length ? (
         <div id="board-container">

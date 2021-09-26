@@ -33,6 +33,7 @@ const Banner = (props) => {
   return (
     <div className="banner">
       <h1>{props.title}</h1>
+      {props.subtitle.length ? <h2>{props.subtitle}</h2> : ''}
       {requestLoading ? (
         <Spinner color="#fff" size="3x" />
       ) : (

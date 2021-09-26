@@ -260,13 +260,21 @@ small,
   text-decoration: none;
   padding: 5px 1.6em;
   border-radius: 5px;
-  margin-right: 9em; 
+  margin-right: 15em; 
  
 }
 
 .banner h1 {
   margin-left: 0.5em;
   font-size: 2.4em;
+  margin-bottom: 0;
+}
+
+.banner h2 {
+  font-size: 1.6em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 0;
+  margin-right: 6em;
 }
 
 #info-container {
@@ -289,6 +297,7 @@ small,
 #info-banner h2 {
   color: white;
   font-size: 3em;
+  font-family: "Roboto", sans-serif;
 }
 
 #info-text {
@@ -494,6 +503,10 @@ small,
   .banner h1 {
     font-size: 3em;
   }
+  .banner h2 {
+    font-size: 1.4em;
+    margin-right: 18em;
+  }
   .navbar ul li {
     margin: 0 2em;
   }
@@ -503,13 +516,14 @@ small,
   }
 
   .random-anime-cta {
-    margin-right: 85vh;
+    margin-right: 49vh;
     cursor: pointer;
   }
 
   .random-anime-cta:hover {
     background-color: #b923ff;
   }
+
   #serchbar-btn:hover {
     background-color: #bd2eff;
   }

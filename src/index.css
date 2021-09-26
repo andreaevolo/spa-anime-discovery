@@ -300,8 +300,9 @@ p {
 
 #info-banner h2 {
   color: white;
-  font-size: 3em;
+  font-size: 2em;
   font-family: "Roboto", sans-serif;
+  margin-left: 0.8em;
 }
 
 #info-text {
@@ -589,6 +590,10 @@ p {
     align-self: end;
   }
 
+  .info-banner h2 {
+    font-size: 3em;
+    margin-left: 0;
+  }
 
 #reviews-list {
   width: 80vw;

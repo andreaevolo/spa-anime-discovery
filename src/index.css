@@ -1,13 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  min-height: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive;
+  margin: 3rem 0 1.38rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 1.4em;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+.navbar ul li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c957ff;
+  color: white;
+  font-size: 0.8em;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+}
+.footer {
+  background-color: rgb(71, 60, 136);
+  margin: 0;
+  padding: 0;
+  min-height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  bottom: -60vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#searchbar-container {
+  display: block;
+  margin: 0 auto;
+  width: 60vw;
+}
+
+#searchbar-container form {
+  /*padding: 0 3em; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbar {
+  display: block;
+  border: 2px solid lightgray;
+  box-shadow: 0px 1px 4px rgb(209, 209, 209);
+  margin: 3em 0;
+  padding: 0.7em;
+  width: 16em;
+}
+#searchbar-btn {
+  height: 3em;
+  width: 6em;
+  cursor: pointer;
+  border: none;
+  background-color: #bd2eff;
+  color: white;
+  box-shadow: 0px 0px 5px rgb(194, 194, 194);
+  margin-left: 1em;
+}
+
+#serchbar-btn:hover {
+  background-color: #bd2eff;
+}
+
+#previews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7em;
+}
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  min-height: 50vh;
+}
+.spinner {
+  margin: 1em auto;
+  animation: 1000ms infinite linear animate-spinner;
+}
+.anime-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 30em;
+  max-width: 15em;
+  overflow: hidden;
+  border: 1px solid gray;
+  margin-bottom: 1em;
+  box-shadow: 0px 3px 4px rgb(194, 194, 194);
+  border: none;
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+  border-radius: 5px;
+}
+
+.anime-preview a img:hover {
+  transform: scale(1.03);
+}
+
+.anime-preview a img {
+  width: 15em;
+  height: 15em;
+  object-fit: cover;
+}
+.anime-preview a {
+  text-decoration: none;
+  color: black;
+}
+.anime-preview h2 {
+  padding: 0 2em;
+  font-size: 1.3em;
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  width: auto;
+}
+
+.card-btns-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-save-btn {
+  background-color: #c957ff;
+  margin-left: 1em;
+  color: white;
+  padding: 0 10px;
+}
+
+.card-info-btn {
+  background-color: #424874;
+  color: white !important;
+  margin-left: 1em;
+}
+
+.card-info-btn:hover {
+  background-color: #333c80;
+}
+.card-btn {
+  padding: 0px 10px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 2em;
+  width: auto;
+}
+
+.card-save-btn:hover {
+  background-color: #bd2eff;
+}
+.banner {
+  height: 60vh;
+  width: 100%;
+  background-color: slateblue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.random-anime-cta {
+  background-color: #bd2eff;
+  color: white;
+  text-decoration: none;
+  padding: 5px 1.6em;
+  border-radius: 5px;
+  margin-right: 9em; 
+ 
+}
+
+.banner h1 {
+  margin-left: 0.5em;
+  font-size: 2.4em;
+}
+
+#info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#info-iframe {
+  height: 50vh;
+}
+
+#info-banner {
+  background-color: slateblue;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info-banner h2 {
+  color: white;
+  font-size: 3em;
+}
+
+#info-text {
+  padding: 0 2em;
+}
+
+#anime-btn-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#add-anime-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: slateblue;
+  color: white;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  margin-left: 2em;
+  margin-top: 1em;
+  cursor: pointer;
+  box-shadow: 0 1px 3px gray;
+}
+
+#list-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 3em auto;
+}
+.list-item {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  height: 5em;
+  animation: 400ms normal linear 200ms animate-item;
+  position: relative;
+}
+.list-item a {
+  text-decoration: none;
+  color: #333c80;
+}
+.list-item h2 {
+  font-size: 1.6em;
+  margin-left: 0.5em;
+}
+.list-item-icon {
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.left-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list-item-img img {
+  height: 3em;
+  width: 3em;
+  margin-top: 1.5em;
+}
+.list-item-icon:hover {
+  color: red;
+}
+
+#reset-list-btn {
+  background-color: red;
+  max-width: 8em;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2.4em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+.alert {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  color: #fff;
+  box-shadow: 0 1px 1px rgb(153, 153, 153);
+  padding: 5px 10px;
+  min-width: 16em;
+  max-width: 35em;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.alert-title {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.alert-message {
+  font-size: 1em;
+  margin: 0;
+}
+
+.alert-slide-in-l {
+  animation: 500ms normal linear slide-left;
+}
+
+.alert-success {
+  background-color: rgb(0, 168, 0);
+  color: white;
+}
+
+#load-reviews-btn {
+  background-color: #bd2eff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  margin: 2em auto;
+  border-radius: 5px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+#reviews-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 7em auto;
+}
+
+.review-list-item {
+  margin-bottom: 2em;
+}
+
+.review-nickname {
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+.review-rate {
+  margin-left: 1em;
+}
+
+.review-info {
+  display: flex;
+  align-items: center;
+}
+
+.review-info img {
+  height: 3em;
+  width: 3em;
+  object-fit: contain;
+}
+
+.readmore-review {
+  cursor: pointer;
+}
+.readmore-review span {
+  color: rgb(0, 33, 180);
+}
+
+@keyframes slide-left {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes animate-item {
+  from {
+    top: -30px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes animate-spinner {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .banner h1 {
+    font-size: 3em;
+  }
+  .navbar ul li {
+    margin: 0 2em;
+  }
+
+  .navbar ul li span {
+    right: 12px;
+  }
+
+  .random-anime-cta {
+    margin-right: 85vh;
+    cursor: pointer;
+  }
+
+  .random-anime-cta:hover {
+    background-color: #b923ff;
+  }
+  #serchbar-btn:hover {
+    background-color: #bd2eff;
+  }
+
+  #searchbar {
+    width: 100%;
+  }
+  #previews-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7em;
+  }
+
+  .anime-preview {
+    max-height: 30em;
+    max-width: 20em;
+  }
+
+  .anime-preview a img {
+    overflow: hidden;
+    width: 20em;
+    height: 20em;
+  }
+
+  #previews-container {
+    padding: 5em 10em;
+  }
+
+  #hero h1 {
+    font-size: 1em;
+  }
+
+  #searchbar {
+    width: 30%;
+    border-style: none;
+  }
+
+  #searchbar-btn {
+    margin-left: 1em;
+    border-radius: 4px;
+  }
+
+  #searchbar-container form {
+    width: 100%;
+  }
+
+  .list-item h2 {
+    font-size: 2em;
+    margin-left: 0.5em;
+  }
+  .list-item-icon {
+    margin-top: 1.8em;
+  }
+
+  .anime-btn {
+    align-self: end;
+  }
 }

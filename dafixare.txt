@@ -1,0 +1,4 @@
+Avvertire l'utente prima di resettare la lista
+Risulta che non è stato trovato nulla in home anche quando sta solo caricando
+in list, il limite di richieste è 30 al minuto, cosa succede se nella propria list ci sono più di 30 elementi? (trovare soluzione)
+VERIFICARE CHE NON CI SIANO DUPLICATI NEL LOCAL STORAGE

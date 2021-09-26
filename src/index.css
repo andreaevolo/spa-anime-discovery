@@ -56,6 +56,10 @@ small,
   font-size: 0.8rem;
 }
 
+p {
+  text-align: justify;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;

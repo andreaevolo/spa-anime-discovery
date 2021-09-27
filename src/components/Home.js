@@ -42,7 +42,7 @@ const Home = (props) => {
           setLodingDataStatus(false);
         }
       }
-      setLodingDataStatus(false);
+      
     };
     fetchResults();
   }, [searchBarInputValue]);

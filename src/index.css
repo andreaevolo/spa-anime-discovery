@@ -125,17 +125,19 @@ p {
 }
 
 #searchbar-container form {
-  /*padding: 0 3em; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
+.searchbar-input {
+  border:  1px solid rgb(255, 255, 255);
+  box-shadow: 0px 1px 3px rgb(209, 209, 209);
+}
+
 #searchbar {
   display: block;
-  border: 2px solid lightgray;
-  box-shadow: 0px 1px 4px rgb(209, 209, 209);
   margin: 3em 0;
   padding: 0.7em;
   width: 16em;
@@ -144,7 +146,7 @@ p {
   height: 3em;
   width: 6em;
   cursor: pointer;
-  border: none;
+  border-style: none;
   background-color: #bd2eff;
   color: white;
   box-shadow: 0px 0px 5px rgb(194, 194, 194);
@@ -154,7 +156,10 @@ p {
 #serchbar-btn:hover {
   background-color: #bd2eff;
 }
-
+.searchbar-error {
+   border: 2px solid red;
+   color: red;
+}
 #previews-container {
   display: flex;
   flex-direction: column;
@@ -533,9 +538,6 @@ p {
     background-color: #bd2eff;
   }
 
-  #searchbar {
-    width: 100%;
-  }
   #previews-container {
     display: flex;
     flex-direction: row;
@@ -566,7 +568,6 @@ p {
 
   #searchbar {
     width: 30%;
-    border-style: none;
   }
 
   #searchbar-btn {

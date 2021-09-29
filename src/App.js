@@ -93,7 +93,7 @@ function App() {
           />
         </Route>
       </Switch>
-      <Footer fullName={"Andrea Evolo"} year={"2021"} />
+      <Footer fullName={"Andrea Ev"} year={"2021"} />
     </div>
   );
 }

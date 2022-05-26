@@ -17,14 +17,11 @@ function App() {
   };
 
   const handleRemoveFromUserList = (id) => {
-    console.log("HANDLER REMOVE FROMC CALLED id: " + id);
+    
     let newList = userAnimeList.filter((el) => {
-      console.log(el);
-      console.log(id);
       return el.mal_id !== id;
     });
-    console.log("new list:");
-    console.log(newList);
+    
     setUserAnimeList(newList);
   };
 
@@ -65,7 +62,7 @@ function App() {
         };
       }
     }
-  }, [localStorageElementCount]);
+  }, [localStorageElementCount, userAnimeList]);
 
   return (
     <div className="App">
